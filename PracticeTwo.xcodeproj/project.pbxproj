@@ -16,6 +16,7 @@
 		9F53262B2683D29F0037345C /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53262A2683D29F0037345C /* UserViewController.swift */; };
 		9F53262E2683D50A0037345C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53262D2683D50A0037345C /* UserModel.swift */; };
 		9F5326302683D64D0037345C /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53262F2683D64D0037345C /* UserViewModel.swift */; };
+		9F5326322684CD550037345C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5326312684CD550037345C /* ProfileViewController.swift */; };
 		9F828CBF26812BFA00923F1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F828CBE26812BFA00923F1F /* AppDelegate.swift */; };
 		9F828CC126812BFA00923F1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F828CC026812BFA00923F1F /* SceneDelegate.swift */; };
 		9F828CC626812BFA00923F1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F828CC426812BFA00923F1F /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		9F53262A2683D29F0037345C /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		9F53262D2683D50A0037345C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9F53262F2683D64D0037345C /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		9F5326312684CD550037345C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9F828CBB26812BFA00923F1F /* PracticeTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F828CBE26812BFA00923F1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F828CC026812BFA00923F1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				9F53262A2683D29F0037345C /* UserViewController.swift */,
 				9F53262D2683D50A0037345C /* UserModel.swift */,
 				9F53262F2683D64D0037345C /* UserViewModel.swift */,
+				9F5326312684CD550037345C /* ProfileViewController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				9F5326282683A8530037345C /* SignInModel.swift in Sources */,
 				9F53261726836E2C0037345C /* SignInViewController.swift in Sources */,
 				9F53261526836DD00037345C /* RegisterViewController.swift in Sources */,
+				9F5326322684CD550037345C /* ProfileViewController.swift in Sources */,
 				9F532621268379A20037345C /* Constants.swift in Sources */,
 				9F53262E2683D50A0037345C /* UserModel.swift in Sources */,
 			);

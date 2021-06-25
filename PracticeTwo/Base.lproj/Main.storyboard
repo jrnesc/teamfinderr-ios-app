@@ -163,6 +163,7 @@
                                         </state>
                                         <connections>
                                             <action selector="signInSubmit:" destination="YN0-Wj-jZD" eventType="touchUpInside" id="RNp-uo-EJZ"/>
+                                            <segue destination="xjY-uG-7eF" kind="show" id="16E-4H-hQS"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -187,6 +188,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZf-5v-eft" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1280" y="-300"/>
+        </scene>
+        <!--User View Controller-->
+        <scene sceneID="kfB-2g-jcG">
+            <objects>
+                <viewController id="xjY-uG-7eF" customClass="UserViewController" customModule="PracticeTwo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B9C-G4-0AF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRp-K5-AgN">
+                                <rect key="frame" x="129" y="135" width="157" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="View Profile Info">
+                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="viewProfile:" destination="xjY-uG-7eF" eventType="touchUpInside" id="pn4-tN-q88"/>
+                                    <segue destination="DK0-tV-yuI" kind="presentation" id="rkf-wG-V55"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="zJp-sa-RkS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="GRp-K5-AgN" firstAttribute="top" secondItem="zJp-sa-RkS" secondAttribute="top" constant="47" id="6WI-Qo-DhQ"/>
+                            <constraint firstItem="GRp-K5-AgN" firstAttribute="leading" secondItem="zJp-sa-RkS" secondAttribute="leading" constant="129" id="9UM-FL-WvD"/>
+                            <constraint firstItem="zJp-sa-RkS" firstAttribute="trailing" secondItem="GRp-K5-AgN" secondAttribute="trailing" constant="128" id="Fvh-1l-uT1"/>
+                            <constraint firstItem="zJp-sa-RkS" firstAttribute="bottom" secondItem="GRp-K5-AgN" secondAttribute="bottom" constant="681" id="z3l-LA-LM7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uf3-js-ig7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wmj-lR-zKv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2253.6231884057975" y="-300"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="RbX-Z6-51R">
+            <objects>
+                <viewController id="DK0-tV-yuI" customClass="ProfileViewController" customModule="PracticeTwo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pV8-KK-clw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6uF-Ya-Irn">
+                                <rect key="frame" x="179" y="122" width="57" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="edY-Aw-iKP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="edY-Aw-iKP" firstAttribute="bottom" secondItem="6uF-Ya-Irn" secondAttribute="bottom" constant="657" id="GJ3-vr-df8"/>
+                            <constraint firstItem="6uF-Ya-Irn" firstAttribute="top" secondItem="edY-Aw-iKP" secondAttribute="top" constant="122" id="PXD-Jf-oHA"/>
+                            <constraint firstItem="6uF-Ya-Irn" firstAttribute="leading" secondItem="edY-Aw-iKP" secondAttribute="leading" constant="179" id="iqe-Tl-uL4"/>
+                            <constraint firstItem="edY-Aw-iKP" firstAttribute="trailing" secondItem="6uF-Ya-Irn" secondAttribute="trailing" constant="178" id="iwX-TA-knT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="usernameProfile" destination="6uF-Ya-Irn" id="2EA-Wj-7uf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Mg-k2-K60" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3163" y="-591"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2jL-86-Vcq">

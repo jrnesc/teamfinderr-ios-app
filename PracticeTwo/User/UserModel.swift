@@ -2,7 +2,7 @@ import Foundation
 
 struct UserModel: Codable {
   var username: String
-  var bio: String
+//  var bio: String
 //  var skills: [Skill]
 //  var memberships: [ProjectMembership]
   

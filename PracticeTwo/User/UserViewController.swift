@@ -2,13 +2,17 @@ import UIKit
 
 class UserViewController: UIViewController {
   
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     title = "Welcome to your dashboard"
-    UserViewModel.shareInstance.getUserProfileAPICall()
   
   }
   
+  @IBAction func viewProfile(_ sender: UIButton) {
+    //UserViewModel.shareInstance.getUserProfileAPICall()
+    
   
+  }
   
 }

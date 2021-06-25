@@ -5,9 +5,9 @@ class UserViewModel {
   
   static let shareInstance = UserViewModel()
   
-  var dataUsername: String = ""
-  var dataBio: String = ""
+  var delegate: HandOff?
   
+  var dataUsername: String?
   
   func getUserProfileAPICall() {
     
@@ -15,13 +15,22 @@ class UserViewModel {
       "Content-Type": "application/json",
     ]
     
-    AF.request(URL(string: userURL)!, headers: headers).responseDecodable(of: UserModel.self) {
+    let task = AF.request(URL(string: userURL)!, headers: headers).responseDecodable(of: UserModel.self) {
       response in guard let userInfo = response.value else { return }
       
-      print(userInfo)
-      
+      DispatchQueue.main.async {
+        self.dataUsername = userInfo.username
+        self.delegate?.setUserUILabel()
+        
+        print(self.dataUsername)
+        print("API call made")
+      }
     }
-   
+    task.resume()
+    
   }
 }
 
+protocol HandOff {
+  func setUserUILabel()
+}
