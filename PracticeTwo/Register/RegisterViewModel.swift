@@ -10,7 +10,9 @@ class RegisterViewModel {
     
     
     let headers: HTTPHeaders = [
-      .contentType("application/json")
+      "Content-Type": "application/json",
+      "Cookie": "",
+
     ]
     
     AF.request(registerURL,

@@ -17,6 +17,7 @@
 		9F53262E2683D50A0037345C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53262D2683D50A0037345C /* UserModel.swift */; };
 		9F5326302683D64D0037345C /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53262F2683D64D0037345C /* UserViewModel.swift */; };
 		9F5326322684CD550037345C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5326312684CD550037345C /* ProfileViewController.swift */; };
+		9F532635268B3F260037345C /* LogOutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F532634268B3F260037345C /* LogOutViewModel.swift */; };
 		9F828CBF26812BFA00923F1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F828CBE26812BFA00923F1F /* AppDelegate.swift */; };
 		9F828CC126812BFA00923F1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F828CC026812BFA00923F1F /* SceneDelegate.swift */; };
 		9F828CC626812BFA00923F1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F828CC426812BFA00923F1F /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 		9F53262D2683D50A0037345C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		9F53262F2683D64D0037345C /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		9F5326312684CD550037345C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9F532634268B3F260037345C /* LogOutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutViewModel.swift; sourceTree = "<group>"; };
 		9F828CBB26812BFA00923F1F /* PracticeTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F828CBE26812BFA00923F1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F828CC026812BFA00923F1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,9 +74,9 @@
 		9F53261E268378F90037345C /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				9F53261626836E2C0037345C /* SignInViewController.swift */,
-				9F5326182683769F0037345C /* SignInViewModel.swift */,
 				9F5326272683A8530037345C /* SignInModel.swift */,
+				9F5326182683769F0037345C /* SignInViewModel.swift */,
+				9F53261626836E2C0037345C /* SignInViewController.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -90,12 +92,20 @@
 		9F5326292683D2800037345C /* User */ = {
 			isa = PBXGroup;
 			children = (
-				9F53262A2683D29F0037345C /* UserViewController.swift */,
 				9F53262D2683D50A0037345C /* UserModel.swift */,
 				9F53262F2683D64D0037345C /* UserViewModel.swift */,
+				9F53262A2683D29F0037345C /* UserViewController.swift */,
 				9F5326312684CD550037345C /* ProfileViewController.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		9F532633268B3ACC0037345C /* LogOut */ = {
+			isa = PBXGroup;
+			children = (
+				9F532634268B3F260037345C /* LogOutViewModel.swift */,
+			);
+			path = LogOut;
 			sourceTree = "<group>";
 		};
 		9F828CB226812BF900923F1F = {
@@ -118,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				9F53261F268379900037345C /* Constants */,
+				9F532633268B3ACC0037345C /* LogOut */,
 				9F53261E268378F90037345C /* SignIn */,
 				9F53261D268378E00037345C /* Register */,
 				9F5326292683D2800037345C /* User */,
@@ -219,6 +230,7 @@
 				9F53261526836DD00037345C /* RegisterViewController.swift in Sources */,
 				9F5326322684CD550037345C /* ProfileViewController.swift in Sources */,
 				9F532621268379A20037345C /* Constants.swift in Sources */,
+				9F532635268B3F260037345C /* LogOutViewModel.swift in Sources */,
 				9F53262E2683D50A0037345C /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

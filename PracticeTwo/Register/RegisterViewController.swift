@@ -10,8 +10,6 @@ class RegisterViewController: UIViewController {
   @IBOutlet weak var password2TextField: UITextField!
   
   
-  
-  
   override func viewDidLoad() {
     super.viewDidLoad()
     title = "Register"
@@ -36,6 +34,7 @@ class RegisterViewController: UIViewController {
     }
   }
 }
+
 
 extension RegisterViewController {
 
