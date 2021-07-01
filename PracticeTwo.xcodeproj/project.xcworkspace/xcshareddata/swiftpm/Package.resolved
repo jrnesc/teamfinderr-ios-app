@@ -9,6 +9,15 @@
           "revision": "f96b619bcb2383b43d898402283924b80e2c4bae",
           "version": "5.4.3"
         }
+      },
+      {
+        "package": "UIMagicDropDown",
+        "repositoryURL": "https://github.com/CodeNationDev/UIMagicDropDown.git",
+        "state": {
+          "branch": "master",
+          "revision": "2e6c2bb581fc674c79fc9b66af4c631ee8cf30de",
+          "version": null
+        }
       }
     ]
   },

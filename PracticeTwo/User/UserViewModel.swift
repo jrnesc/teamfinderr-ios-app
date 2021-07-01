@@ -34,9 +34,10 @@ class UserViewModel {
     
     let headers: HTTPHeaders = [
       "Content-Type": "application/json",
+      
     ]
     
-    AF.request(registerURL,
+    AF.request(addSkillURL,
                method: .post,
                parameters: addSkill,
                encoder: JSONParameterEncoder.default,

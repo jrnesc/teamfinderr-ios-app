@@ -25,6 +25,7 @@ class UserViewController: UIViewController {
   }
   
   @IBAction func addSkillBtn(_ sender: UIButton) {
+//    UserViewModel.shareInstance.addUserSkill(addSkill: <#T##Skill#>, completionHandler: <#T##(Bool) -> ()#>)
   }
   
 }

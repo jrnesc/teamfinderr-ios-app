@@ -18,6 +18,7 @@
 		9F5326302683D64D0037345C /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53262F2683D64D0037345C /* UserViewModel.swift */; };
 		9F5326322684CD550037345C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5326312684CD550037345C /* ProfileViewController.swift */; };
 		9F532635268B3F260037345C /* LogOutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F532634268B3F260037345C /* LogOutViewModel.swift */; };
+		9F532637268C8FA90037345C /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F532636268C8FA90037345C /* SkillsViewController.swift */; };
 		9F828CBF26812BFA00923F1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F828CBE26812BFA00923F1F /* AppDelegate.swift */; };
 		9F828CC126812BFA00923F1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F828CC026812BFA00923F1F /* SceneDelegate.swift */; };
 		9F828CC626812BFA00923F1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F828CC426812BFA00923F1F /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		9F53262F2683D64D0037345C /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		9F5326312684CD550037345C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9F532634268B3F260037345C /* LogOutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutViewModel.swift; sourceTree = "<group>"; };
+		9F532636268C8FA90037345C /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
 		9F828CBB26812BFA00923F1F /* PracticeTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F828CBE26812BFA00923F1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F828CC026812BFA00923F1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				9F53262F2683D64D0037345C /* UserViewModel.swift */,
 				9F53262A2683D29F0037345C /* UserViewController.swift */,
 				9F5326312684CD550037345C /* ProfileViewController.swift */,
+				9F532636268C8FA90037345C /* SkillsViewController.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			mainGroup = 9F828CB226812BF900923F1F;
 			packageReferences = (
 				9F828CD226812F1000923F1F /* XCRemoteSwiftPackageReference "Alamofire" */,
+				9F532638268C93D80037345C /* XCRemoteSwiftPackageReference "UIMagicDropDown" */,
 			);
 			productRefGroup = 9F828CBC26812BFA00923F1F /* Products */;
 			projectDirPath = "";
@@ -231,6 +235,7 @@
 				9F5326322684CD550037345C /* ProfileViewController.swift in Sources */,
 				9F532621268379A20037345C /* Constants.swift in Sources */,
 				9F532635268B3F260037345C /* LogOutViewModel.swift in Sources */,
+				9F532637268C8FA90037345C /* SkillsViewController.swift in Sources */,
 				9F53262E2683D50A0037345C /* UserModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +440,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9F532638268C93D80037345C /* XCRemoteSwiftPackageReference "UIMagicDropDown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CodeNationDev/UIMagicDropDown.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 		9F828CD226812F1000923F1F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";

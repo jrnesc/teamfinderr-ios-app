@@ -25,6 +25,7 @@ struct Skill: Codable {
   var category: String
 }
 
+
 //struct ProjectMembership: Codable {
 //  var role: String
 //  var category: String
