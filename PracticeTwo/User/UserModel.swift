@@ -20,10 +20,10 @@ struct UserModel: Codable {
   
 }
 
-//struct Skill: Codable {
-//  var name: String
-//  var category: String
-//}
+struct Skill: Codable {
+  var name: String
+  var category: String
+}
 
 //struct ProjectMembership: Codable {
 //  var role: String

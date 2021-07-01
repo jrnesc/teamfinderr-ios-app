@@ -10,9 +10,21 @@ class UserViewController: UIViewController {
   }
   
   @IBAction func viewProfile(_ sender: UIButton) {
-    //UserViewModel.shareInstance.getUserProfileAPICall()
-    
+  }
   
+  
+  @IBAction func logOutBtn(_ sender: UIButton) {
+    LogOutViewModel.shareInstance.logOutAPICall() {
+      (ifSuccess) in
+      if ifSuccess {
+        print("Logged out")
+      } else {
+        print("Something didn't work")
+      }
+    }
+  }
+  
+  @IBAction func addSkillBtn(_ sender: UIButton) {
   }
   
 }
