@@ -3,7 +3,6 @@ import Alamofire
 
 
 class RegisterViewModel {
-  static let shareInstance = RegisterViewModel()
   
   
   func registerAPICall(register: RegisterModel, completionHandler: @escaping (Bool) -> ()) {

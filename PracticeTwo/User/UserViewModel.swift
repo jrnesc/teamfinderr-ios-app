@@ -1,6 +1,9 @@
 import Foundation
 import Alamofire
 
+protocol HandOff {
+  func setUserUILabel()
+}
 
 class UserViewModel {
   
@@ -64,10 +67,4 @@ class UserViewModel {
           }
       }
   }
-  
-  
-}
-
-protocol HandOff {
-  func setUserUILabel()
 }

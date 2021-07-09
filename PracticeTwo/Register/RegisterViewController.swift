@@ -3,6 +3,7 @@ import UIKit
 
 class RegisterViewController: UIViewController {
   
+  var registerVM = RegisterViewModel()
   
   @IBOutlet weak var usernameTextField: UITextField!
   @IBOutlet weak var emailTextField: UITextField!
@@ -24,7 +25,7 @@ class RegisterViewController: UIViewController {
     
     let register = RegisterModel(username: uName, email: email, password1: pWord1, password2: pWord2)
     
-    RegisterViewModel.shareInstance.registerAPICall(register: register) {
+    registerVM.registerAPICall(register: register) {
       (ifSuccess) in
       if ifSuccess {
         self.showAlert(title: "Success!", message: "OMG! You're officially a member!")

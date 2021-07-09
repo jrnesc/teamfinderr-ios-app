@@ -26,7 +26,6 @@ extension SignInViewModel: TokenDelegate {
 }
 
 
-
 class SignInViewModel {
   
   var delegate: TokenDelegate?
@@ -34,14 +33,11 @@ class SignInViewModel {
   let userDefault = UserDefaults.standard
   
   func signInAPICall(signIn: SignInModel, completionHandler: @escaping Handler) {
-    
-    
     self.delegate = self
     
     let headers: HTTPHeaders = [
       "Content-Type": "application/json",
       "Cookie": "",
-
     ]
     
     let task = AF.request(signInURL,
@@ -56,8 +52,6 @@ class SignInViewModel {
             do {
               let json = try JSONDecoder().decode(TokenHandler.self, from: data!)
               self.delegate?.tokenAssign(x: json.key)
-//              print(json.key)
-//              let json = try JSONSerialization.jsonObject(with: data!, options: [])
               
               if response.response?.statusCode == 200 {
                 completionHandler(.success(json))
@@ -65,7 +59,6 @@ class SignInViewModel {
                 completionHandler(.failure(.custom(message: "connectivity issue")))
               }
             } catch {
-              print(error)
               completionHandler(.failure(.custom(message: "try again")))
             }
           case .failure(let error):
