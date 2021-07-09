@@ -1,44 +1,21 @@
 import Foundation
 import Alamofire
 
-
-class UserViewModel {
+class ProjectViewModel {
   
-  var delegate: HandOff?
+  var signInVM = SignInViewModel()
   
-  var dataUsername: String?
-  
-  func getUserProfileAPICall() {
+  func addProject(createProject: Project, completionHandler: @escaping (Bool) -> ()) {
     
     let headers: HTTPHeaders = [
       "Content-Type": "application/json",
-    ]
-    
-    let task = AF.request(URL(string: userURL)!, headers: headers).responseDecodable(of: UserModel.self) {
-      response in guard let userInfo = response.value else { return }
-      
-      DispatchQueue.main.async {
-        self.dataUsername = userInfo.username
-        self.delegate?.setUserUILabel()
-        
-//        print(self.dataUsername)
-        print("API call made")
-      }
-    }
-    task.resume()
-  }
-  
-  
-  func addUserSkill(addSkill: Skill, completionHandler: @escaping (Bool) -> ()) {
-    
-    let headers: HTTPHeaders = [
-      "Content-Type": "application/json",
+      "Authorization": "Token \(signInVM.getToken())"
       
     ]
     
-    AF.request(addSkillURL,
+    AF.request(projectsURL,
                method: .post,
-               parameters: addSkill,
+               parameters: createProject,
                encoder: JSONParameterEncoder.default,
                headers: headers)
       .response { response in debugPrint(response)
@@ -62,12 +39,9 @@ class UserViewModel {
             print(error)
             completionHandler(false)
           }
+        
       }
   }
-  
-  
 }
 
-protocol HandOff {
-  func setUserUILabel()
-}
+

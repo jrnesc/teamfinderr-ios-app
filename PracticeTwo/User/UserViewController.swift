@@ -2,6 +2,7 @@ import UIKit
 
 class UserViewController: UIViewController {
   
+  var logOutVM = LogOutViewModel()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -14,18 +15,13 @@ class UserViewController: UIViewController {
   
   
   @IBAction func logOutBtn(_ sender: UIButton) {
-    LogOutViewModel.shareInstance.logOutAPICall() {
-      (ifSuccess) in
-      if ifSuccess {
-        print("Logged out")
-      } else {
-        print("Something didn't work")
-      }
-    }
+    logOutVM.logOutBtnTapped()
+    
   }
   
   @IBAction func addSkillBtn(_ sender: UIButton) {
 //    UserViewModel.shareInstance.addUserSkill(addSkill: <#T##Skill#>, completionHandler: <#T##(Bool) -> ()#>)
   }
+  
   
 }

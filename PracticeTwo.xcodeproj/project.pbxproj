@@ -19,6 +19,9 @@
 		9F5326322684CD550037345C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F5326312684CD550037345C /* ProfileViewController.swift */; };
 		9F532635268B3F260037345C /* LogOutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F532634268B3F260037345C /* LogOutViewModel.swift */; };
 		9F532637268C8FA90037345C /* SkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F532636268C8FA90037345C /* SkillsViewController.swift */; };
+		9F53263D268E11FC0037345C /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53263C268E11FC0037345C /* ProjectViewController.swift */; };
+		9F53263F268E13F30037345C /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F53263E268E13F30037345C /* ProjectViewModel.swift */; };
+		9F532641268E140A0037345C /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F532640268E140A0037345C /* ProjectModel.swift */; };
 		9F828CBF26812BFA00923F1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F828CBE26812BFA00923F1F /* AppDelegate.swift */; };
 		9F828CC126812BFA00923F1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F828CC026812BFA00923F1F /* SceneDelegate.swift */; };
 		9F828CC626812BFA00923F1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F828CC426812BFA00923F1F /* Main.storyboard */; };
@@ -41,6 +44,9 @@
 		9F5326312684CD550037345C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9F532634268B3F260037345C /* LogOutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogOutViewModel.swift; sourceTree = "<group>"; };
 		9F532636268C8FA90037345C /* SkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkillsViewController.swift; sourceTree = "<group>"; };
+		9F53263C268E11FC0037345C /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		9F53263E268E13F30037345C /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
+		9F532640268E140A0037345C /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
 		9F828CBB26812BFA00923F1F /* PracticeTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PracticeTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F828CBE26812BFA00923F1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F828CC026812BFA00923F1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +117,16 @@
 			path = LogOut;
 			sourceTree = "<group>";
 		};
+		9F53263B268E11E70037345C /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				9F53263C268E11FC0037345C /* ProjectViewController.swift */,
+				9F53263E268E13F30037345C /* ProjectViewModel.swift */,
+				9F532640268E140A0037345C /* ProjectModel.swift */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
 		9F828CB226812BF900923F1F = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				9F53261F268379900037345C /* Constants */,
+				9F53263B268E11E70037345C /* Project */,
 				9F532633268B3ACC0037345C /* LogOut */,
 				9F53261E268378F90037345C /* SignIn */,
 				9F53261D268378E00037345C /* Register */,
@@ -231,9 +248,12 @@
 				9F828CD626812FE300923F1F /* RegisterModel.swift in Sources */,
 				9F5326282683A8530037345C /* SignInModel.swift in Sources */,
 				9F53261726836E2C0037345C /* SignInViewController.swift in Sources */,
+				9F53263F268E13F30037345C /* ProjectViewModel.swift in Sources */,
 				9F53261526836DD00037345C /* RegisterViewController.swift in Sources */,
+				9F532641268E140A0037345C /* ProjectModel.swift in Sources */,
 				9F5326322684CD550037345C /* ProfileViewController.swift in Sources */,
 				9F532621268379A20037345C /* Constants.swift in Sources */,
+				9F53263D268E11FC0037345C /* ProjectViewController.swift in Sources */,
 				9F532635268B3F260037345C /* LogOutViewModel.swift in Sources */,
 				9F532637268C8FA90037345C /* SkillsViewController.swift in Sources */,
 				9F53262E2683D50A0037345C /* UserModel.swift in Sources */,

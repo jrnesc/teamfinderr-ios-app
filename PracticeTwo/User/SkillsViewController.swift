@@ -4,7 +4,7 @@ import UIKit
 class SkillsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
   
   
-  
+  var userVM = UserViewModel()
   
   @IBOutlet weak var skillNameTextField: UITextField!
   @IBOutlet weak var categoryPicker: UIPickerView!
@@ -58,7 +58,7 @@ class SkillsViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     let skills = Skill(name: sName, category: cPicker)
     
-    UserViewModel.shareInstance.addUserSkill(addSkill: skills) {
+    self.userVM.addUserSkill(addSkill: skills) {
       (ifSuccess) in
       if ifSuccess {
         print("cook")

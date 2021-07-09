@@ -1,27 +1,36 @@
 import Foundation
 import Alamofire
 
-class LogOutViewModel {
+
+protocol LogOutViewModelType {
+  func logOutBtnTapped()
+}
+
+
+class LogOutViewModel: LogOutViewModelType {
+
+    
   
-  static let shareInstance = LogOutViewModel()
-  
+  func logOutBtnTapped() {
+    
+    self.logOutAPICall() {
+      (ifSuccess) in
+        if ifSuccess {
+          print("Logged out")
+        } else {
+          print("Something didn't work")
+        }
+    }
+    
+  }
+    
+    
   func logOutAPICall(completionHandler: @escaping (Bool) -> ()) {
     
     let headers: HTTPHeaders = [
       "Content-Type": "application/json",
       "Cookie": "",
-    ]
-    
-//    let task = AF.request(logOutURL, method: .post, headers: headers).response {
-//      response in
-//          switch response.result {
-//            case .success(_): break
-//            case .failure(_): print("failed")
-//              }
-//    print("Hello")
-//  }
-//    task.resume()
-    
+      ]
     
     let task = AF.request(logOutURL, method: .post, headers: headers)
       .response {
