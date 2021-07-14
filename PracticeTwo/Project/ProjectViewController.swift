@@ -22,7 +22,7 @@ class ProjectViewController: UIViewController {
     
     let ProjectItems = Project(name: projName, description: projDescription)
     
-    projectVM.addProject(createProject: ProjectItems) {
+    self.projectVM.addProject(createProject: ProjectItems) {
       (ifSuccess) in
       if ifSuccess {
         self.showAlert(title: "Success!", message: "OMG! You created a project!")
@@ -31,8 +31,7 @@ class ProjectViewController: UIViewController {
       }
     }
   }
-  
-  
+
 }
 
 extension ProjectViewController {
@@ -45,3 +44,5 @@ extension ProjectViewController {
     self.present(alert, animated: true, completion: nil)
   }
 }
+
+

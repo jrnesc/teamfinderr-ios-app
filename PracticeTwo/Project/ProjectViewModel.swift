@@ -1,12 +1,20 @@
 import Foundation
+import UIKit
 import Alamofire
 
+protocol ProjectTableReloadDelegate {
+  func tableWasReloaded()
+}
+
+
 class ProjectViewModel {
-  
   var signInVM = SignInViewModel()
   
+  var indexProject: [Project] = []
+  
+  var delegate: ProjectTableReloadDelegate?
+  
   func addProject(createProject: Project, completionHandler: @escaping (Bool) -> ()) {
-    
     let headers: HTTPHeaders = [
       "Content-Type": "application/json",
       "Authorization": "Token \(signInVM.getToken())"
@@ -42,6 +50,23 @@ class ProjectViewModel {
         
       }
   }
+  
+  
+  func getProjects() {
+    let headers: HTTPHeaders = [
+      "Content-Type": "application/json",
+      "Authorization": "Token \(signInVM.getToken())",
+    ]
+    
+    let task = AF.request("https://teamfinderr.herokuapp.com/api/v1/projects/", headers: headers).responseDecodable(of: [Project].self) {
+      response in guard let projectResult = response.value else { return }
+      
+      self.indexProject.append(contentsOf: projectResult)
+      self.delegate?.tableWasReloaded()
+    }
+    task.resume()
+  }
+  
 }
 
 

@@ -11,14 +11,15 @@ protocol TokenDelegate {
 
 extension SignInViewModel: TokenDelegate {
   
+  //Worth adding "-> Bool" here? Does it make it easier to test?
   func tokenAssign(x: String) {
     userDefault.set(x, forKey: "key")
   }
   
   
   func getToken() -> String {
-    if let xToken = userDefault.object(forKey: "key") as? String{
-      return xToken
+    if let token = userDefault.object(forKey: "key") as? String{
+      return token
     } else {
       return ""
     }
