@@ -38,23 +38,32 @@ class ProjectDetailViewController: UIViewController, UITableViewDelegate, UITabl
     guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProjectDetailCell", for: indexPath) as? ProjectDetailTableViewCell else {
       fatalError("Cannot dequeue ProjectDetailCell")
   }
-    let indexItems = self.projectVM.indexProject[indexPath.row]
+    //Not sure how to get the tableView to display information relevant to the cell that was clicked.
+    //I think it's something to do with the didSelectRowAt() func inside ProjTableVC which handles the detail view for the ViewController
     
+    let indexItems = self.projectVM.indexProject[indexPath.row]
+
     if let item = indexItems.memberships {
       for x in 0..<item.count {
-        if let itemElements = item[x].user?.username {
-          cell.detailUsername.text = itemElements
+        if let itemCategory = item[x].category {
+          cell.detailCategory.text = itemCategory
+        } else {
+          cell.detailCategory.text = ""
+        }
+        
+        if let itemRole = item[x].role {
+          cell.detailRole.text = itemRole
+        } else {
+          cell.detailRole.text = ""
+        }
+        
+        if let itemUsername = item[x].user?.username {
+          cell.detailUsername.text = itemUsername
         } else {
           cell.detailUsername.text = ""
         }
       }
     }
-    
-    
-//    cell.detailUsername.text = indexItems.memberships?[0].user?.username
-//    cell.detailRole.text =  indexItems.memberships?[0].role
-//    cell.detailCategory.text = indexItems.memberships?[0].category
-//    cell.detailUsername.text = "Hello"
     return cell
   }
 }

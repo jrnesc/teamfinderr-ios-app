@@ -11,8 +11,8 @@ struct Project: Codable {
 
 struct Membership: Codable {
     var id: Int
-    var role: String
-    var category: String
+    var role: String?
+    var category: String?
     var user: User?
 }
 

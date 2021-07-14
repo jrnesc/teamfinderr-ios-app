@@ -8,13 +8,16 @@ protocol ProjectTableReloadDelegate {
 
 
 class ProjectViewModel {
+  
   var signInVM = SignInViewModel()
   
   var indexProject: [Project] = []
+  var indexCounter: Int?
   
   var delegate: ProjectTableReloadDelegate?
   
   func addProject(createProject: Project, completionHandler: @escaping (Bool) -> ()) {
+    
     let headers: HTTPHeaders = [
       "Content-Type": "application/json",
       "Authorization": "Token \(signInVM.getToken())"
@@ -53,6 +56,7 @@ class ProjectViewModel {
   
   
   func getProjects() {
+    
     let headers: HTTPHeaders = [
       "Content-Type": "application/json",
       "Authorization": "Token \(signInVM.getToken())",
@@ -60,11 +64,34 @@ class ProjectViewModel {
     
     let task = AF.request("https://teamfinderr.herokuapp.com/api/v1/projects/", headers: headers).responseDecodable(of: [Project].self) {
       response in guard let projectResult = response.value else { return }
+//      print(projectResult)
       
       self.indexProject.append(contentsOf: projectResult)
       self.delegate?.tableWasReloaded()
+      
+      self.indexCounter = self.indexProject.count
+      
+//      for i in 0..<counter {
+//        if let item = self.indexProject[i].memberships {
+//          for x in 0..<item.count {
+//            if let itemMembers = item[x].user?.username {
+//              print(itemMembers)
+//            } else {
+//              print("First fail")
+//            }
+//          }
+//
+//        } else {
+//          print("Failed")
+//        }
+//
+//      }
+      
+//      print(self.indexProject)
+      
     }
     task.resume()
+    
   }
   
 }
